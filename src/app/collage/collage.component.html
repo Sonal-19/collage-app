@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Collage Maker</h1>
+
+    <div class="card shadow-lg px-4 py-3">
+      <div class="card-body">
+        <h3 class="card-title text-center">Upload Images</h3>
+        <div class="row px-4 py-3">
+          <div class="col-md-6 mb-3">
+            <label for="image1" class="form-label">Select First Image:</label>
+            <input type="file" (change)="onFileChange($event, 1)" class="form-control" accept="image/*">
+          </div>
+          <div class="col-md-6 mb-3">
+            <label for="image2" class="form-label">Select Second Image:</label>
+            <input type="file" (change)="onFileChange($event, 2)" class="form-control" accept="image/*">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="image1 && image2" class="card shadow-lg mb-4">
+      <div class="card-body">
+        <h3 class="card-title text-center mb-3">Preview Collage</h3>
+        <div #collageContainer class="collage-container" >
+            <img [src]="image1" class="collage-image" alt="First Image">
+            <img [src]="image2" class="collage-image" alt="Second Image">
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center my-3">
+      <button (click)="downloadCollage()" class="btn btn-primary btn-lg">
+        Download Collage
+      </button>
+    </div>
+  </div>
