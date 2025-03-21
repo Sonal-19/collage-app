@@ -1,16 +1,27 @@
 .collage-container {
-    display: flex;
-    justify-content: space-around;
-    border: 2px solid #ddd;
-    /* padding: 10px; */
-  }
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: center;
+  /* width: 30%; */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  border: 2px solid #ddd;
+  /* padding: 10px; */
+}
 
-  .collage-image {
-    width: 75%;
-    height: auto;
-    border: 1px solid #ccc;
-  }
+/* .collage-image {
+  width: 75%;
+  height: auto;
+  border: 1px solid #ccc;
+} */
 
+.collage-image {
+  max-width: 50%;
+  height: 52vh;
+  border: 1px solid #ccc;
+}
   /* .collage-container {
     border: 2px solid #ddd;
     padding: 10px;
